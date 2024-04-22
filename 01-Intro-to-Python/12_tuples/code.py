@@ -6,5 +6,6 @@
 friends = ("Ian", "James", "Sam")
 # friends.append("Liam") #wrong
 
+friends = friends + ("Liam") #wrong
 friends = friends + ("Liam",)
 print(friends)
