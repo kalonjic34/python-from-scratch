@@ -1,0 +1,1 @@
+car = ["ok", "ok,","ok", "faulty","ok","ok,"]
