@@ -9,3 +9,8 @@ students = [
 ]
 
 # TODO: Write a loop to iterate over the list and print each student's name and grade.
+
+for student in students:
+    name = student["name"]
+    grade = student["grade"]
+    print(f"{name} has {grade}%")
