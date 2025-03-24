@@ -19,7 +19,9 @@ print(type(greeting))
 print(type(age))
 
 age_in_words = '2 years'
-# TypeError: can only concatenate str (not "int") to str      
-# Proving that python is a strongly typed
-print(name +" is "+ age+ " years old")
+print(name +f" is {age} years old")
 print(type(age))
+
+print(f'Pi is approx {22/ 7:12.50f}')
+pi = 22/7
+print(f"Pi is approx {pi: 7:12.50f}")
