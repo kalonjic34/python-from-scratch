@@ -18,6 +18,8 @@ print(age)
 print(type(greeting))
 print(type(age))
 
-age = '2 years'
-print(age)
+age_in_words = '2 years'
+# TypeError: can only concatenate str (not "int") to str      
+# Proving that python is a strongly typed
+print(name +" is "+ age+ " years old")
 print(type(age))
