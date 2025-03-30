@@ -15,3 +15,24 @@ def first_longer_than_second(first_word, second_word):
 print(first_longer_than_second("Python", "Ruby"))
 print(first_longer_than_second("cat", "mouse"))
 print(first_longer_than_second("Steven", "Seagal"))
+
+# Define a first_and_last_letter function that accepts a string as an argument
+# input and should return True if the first and last character are equal.
+
+def same_first_and_last_letter(word):
+    return word[0] == word[-1]
+print(same_first_and_last_letter("runner"))
+print(same_first_and_last_letter("Runner"))
+print(same_first_and_last_letter("clock"))
+print(same_first_and_last_letter("q"))
+
+# Define a three_number_sum function that accepts a 3-character string as an argument.
+# The function should add up the sum of the digits of the string.
+# You’ll need to figure out a way to convert the stringified number.
+
+def three_number_sum(wordsum):
+    return int(wordsum[0]) + int(wordsum[1]) + int(wordsum[2])
+print(three_number_sum("123"))
+print(three_number_sum("567"))
+print(three_number_sum("444"))
+print(three_number_sum("000"))
