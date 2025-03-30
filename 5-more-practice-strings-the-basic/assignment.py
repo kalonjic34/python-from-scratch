@@ -36,3 +36,29 @@ print(three_number_sum("123"))
 print(three_number_sum("567"))
 print(three_number_sum("444"))
 print(three_number_sum("000"))
+
+# Define a first_three_characters function that accepts a string argument.
+# The function should return the first 3 characters of the string.
+
+def first_three_characters(char):
+    return char[0:3]
+print(first_three_characters("dynasty"))
+print(first_three_characters("empire"))
+
+# Define a last_five_characters function that accepts a string argument.
+# The function should return the last 5 characters of the string.
+
+def last_five_characters(char):
+    return char[-5:]
+print(last_five_characters("dynasty"))
+print(last_five_characters("empire"))
+
+# Define a is_palindrome function that accepts a string argument.
+# The function should return True if the string is spelled the same backwards as it is forwards.
+# Return False otherwise.
+
+def is_palindrome(word):
+    return word[:] == word[::-1]
+
+print(is_palindrome("racecar"))
+print(is_palindrome("yummy"))
