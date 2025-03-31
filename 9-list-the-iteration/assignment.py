@@ -66,3 +66,34 @@ print(super_sum(["mustache"]))
 print(super_sum(["mustache","greatest"]))
 print(super_sum(["mustache","pessimist"]))
 print(super_sum(["mustache","pessimist","almost"]))
+
+# Define in_list function that accepts a list of strings and a separate and separate string
+# Return the index where the string exist in the list
+# If the string does not exist, return -1
+
+
+strings =["enchanted", "sparks fly", "long live"]
+
+def in_list(strings,target):
+    for index,element in enumerate(strings):
+        if element == target:
+            return index
+    return -1
+
+print(in_list(strings, "enchanted"))
+print(in_list(strings, "sparks fly"))
+print(in_list(strings, "fifteen"))
+print(in_list(strings, "love story"))
+
+#Define a sum_of_values_and_indices function that accepts a list of numbers
+#It should return the sum of all elements along with along with index values
+
+def sum_of_values_and_indices(numbers):
+    total_sum = 0
+    for index,number in enumerate(numbers):
+        total_sum += index + number 
+    return total_sum
+
+print(sum_of_values_and_indices([1,2,3]))
+print(sum_of_values_and_indices([0,0,0,0]))
+print(sum_of_values_and_indices([0]))
