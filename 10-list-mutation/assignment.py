@@ -107,3 +107,34 @@ print(factors(1))
 print(factors(2))
 print(factors(10))
 print(factors(64))
+
+# Declare a delete_all function that accepts a list of strings and a target string.
+# Remove all occurrences of the target string from the list and return it.
+
+def delete_all(items, target):
+    while target in items:
+        items.remove(target)
+    return items
+
+print(delete_all([1,3,5], 5))
+print(delete_all(["x", "y", "z", "x", "x"], "x"))
+print(delete_all(["apple", "banana", "apple", "cherry"], "apple"))
+
+# Declare a push_or_pop function that accepts a list of numbers.
+# Build up and return a new list by iterating over the list of numbers.
+# If a number is greater than 5, add it to the end of the new list.
+# If a number is less than or equal to 5, remove the last element added to the new list.
+
+def push_or_pop(numbers):
+    numbers_list = []
+    for number in numbers:
+        if number > 5:
+            numbers_list.append(number)
+        elif number <= 5:
+            numbers_list.pop()
+    return numbers_list
+
+print(push_or_pop([10]))
+print(push_or_pop([10,4]))
+print(push_or_pop([10,20,30]))
+print(push_or_pop([10,30]))
