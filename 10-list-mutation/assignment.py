@@ -64,3 +64,30 @@ def same_index_values(list1, list2):
 
 print(same_index_values([1, 2, 3], [3, 2, 1]))
 print(same_index_values(["a", "b", "c"], ["c", "b", "d"]))
+
+# Define an evens function that accepts a list of numbers.
+# The function should return a new list consisting of only the even numbers from the original list.
+
+numbers_list = [4,8,15,16,23,42]
+
+def only_evens(numbers):
+    even_numbers = []
+    for number in numbers:
+        if number % 2 == 0:
+            even_numbers.append(number)
+    return even_numbers
+
+print(only_evens(numbers_list))
+
+# Define a long_strings function that accepts a list of strings.
+# The function should return a new list consisting of only the strings with 5 characters or more.
+
+def long_strings(strings):
+    string_list = []
+    for string in strings:
+        if len(string) >= 5:
+            string_list.append(string)
+    return string_list
+
+print(long_strings(["Hello", "Goodbye", "Saw"]))
+print(long_strings(["a", "cat", "Job"]))
