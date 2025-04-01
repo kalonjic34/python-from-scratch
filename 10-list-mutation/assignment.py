@@ -21,3 +21,46 @@ print(camping_trip_supplies)
 tech_companies = ["Google", "Microsoft","Blackberry","IBM","Yahoo"]
 tech_companies[1:4] = "Facebook","Apple"
 print(tech_companies)
+
+
+# Declare a length_match function that accepts a list of strings and an integer.
+# It should return a count of the number of strings whose length is equal to the number.
+
+def length_match(values, target):
+    count = 0
+    for value in values:
+        if len(value) == target:
+            count += 1
+            
+    return count
+print(length_match(["dog", "kangaroo", "mouse"], 3))
+print(length_match(["cat", "dog", "kangaroo", "mouse"], 3)) 
+
+# Declare a sum_from function that accepts two numbers as arguments.
+# The second number will always be greater than the first number.
+# The function should return the sum of all numbers from the first number to the second number (inclusive).
+
+def sum_from(start, end):
+    total_sum = 0
+    for number in range(start,end +1):
+        total_sum += number
+    return total_sum
+
+print(sum_from(1, 5)) 
+print(sum_from(3, 7)) 
+print(sum_from(6, 12))
+
+# Declare a same_index_values function that accepts two lists.
+# The function should return a list of the index positions 
+# in which the two lists have equal elements.
+
+def same_index_values(list1, list2):
+    results = []
+    
+    for index, value in enumerate(list1):
+        if value == list2[index]:
+            results.append(index)
+    return results
+
+print(same_index_values([1, 2, 3], [3, 2, 1]))
+print(same_index_values(["a", "b", "c"], ["c", "b", "d"]))
