@@ -1,3 +1,12 @@
+"""
+This script demonstrates the difference between shallow and deep copies in Python
+
+- A shallow copy creates a new object but does not create copies of objects within the original object
+- A deep copy creates a new object and recursively copies all objects within the original object
+
+The script uses slicing, the `copy` module, and the `copy` and `deepcopy` methods to illustrate these concepts
+"""
+
 import copy
 
 a = [1,2,3]
