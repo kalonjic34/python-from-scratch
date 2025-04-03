@@ -46,3 +46,18 @@ def sum_of_values(dictionary1, keys):
 print(sum_of_values(my_dict, ["a"]))
 print(sum_of_values(my_dict, ["a", "c"]))
 print(sum_of_values(my_dict, ["b", "a", "c"]))
+
+
+#
+
+my_dict = {
+    "A":"K",
+    "B":"D",
+    "C":"A",
+    "D":"Z"
+}
+
+def common_elements(my_dict):
+    return [key for key in my_dict.keys() if key in my_dict.values()]
+
+print(common_elements(my_dict))
