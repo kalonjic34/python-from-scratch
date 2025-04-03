@@ -21,3 +21,32 @@ winning_lottery_numbers = {
     (34,26,86,12,86): True,
     (23,88,43,21): False
 }
+
+# Define a to_dictionary function that accepts a list of strings.
+# The function should return a dictionary where the keys are the strings
+# and the values are their original index positions in the list.
+
+detectives = ["Sherlock Holmes", "Hercule Poirot","Nancy Drew"]
+
+def to_dictionary(elements):
+    dict_list = {}
+    for index, element in enumerate(elements):
+        dict_list[element] = index
+    return dict_list
+
+print(to_dictionary(detectives))
+            
+# Define a length_counts function that accepts a list of strings.
+# The function should return a dictionary where the keys represent
+# length and the values represent how many strings have that length.
+
+sa_countries = ["Brazil","Venezuela","Ecuador","Bolivia","Peru"]
+            
+def length_counts(elements):
+    counts = {}
+    for element in elements:
+        length = len(element)
+        current_count = counts.get(length,0)
+        counts[length] = current_count +1
+    return counts
+print(length_counts(sa_countries))
