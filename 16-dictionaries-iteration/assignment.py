@@ -61,3 +61,27 @@ def common_elements(my_dict):
     return [key for key in my_dict.keys() if key in my_dict.values()]
 
 print(common_elements(my_dict))
+
+
+#
+
+complexity = [
+    {
+        "A":True,    
+        "B":False,    
+    },
+    {
+        3.4: ["Apple","Orange"],
+        6.7: ["Watermelon"],    
+        10.2: ["Watermelon"]    
+    },
+    {
+        "C":True,
+        "D":False,
+    },
+    {
+        3.4: ["Apple","Orange"],
+        6.7: ["Watermelon"],    
+        10.2: ["Watermelon"]   
+    }
+]
