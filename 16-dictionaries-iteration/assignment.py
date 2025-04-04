@@ -111,3 +111,40 @@ print(plenty_of_arguments(20,30))
 print(plenty_of_arguments(a = 50,b = 75))
 print(plenty_of_arguments(a = 50,b = 75, c = 50))
 print(plenty_of_arguments(a = 25,b = 25, c = 25, d = 25))
+
+# Write a Python program to model a remote control feature for a television.
+# Declare a stations_to_numbers function that accepts a dictionary.
+# The keys will be the station names, and the values will be the channel numbers.
+
+# EXAMPLE:
+# channels = {'CBS': 2, 'NBC': 4, 'FOX': 5}
+# stations_to_numbers(channels) => {'CBS': 2, 'NBC': 4, 'FOX': 5}
+
+# The stations_to_numbers function should return a dictionary
+# where the keys are the station names and the values are the channel numbers.
+
+channels = {'CBS': 2, 'NBC': 4, 'FOX': 5}
+
+def station_to_number(channels):
+    return {station_number:channel_numbers for channel_numbers,station_number in channels.items()}
+
+print(station_to_number(channels))
+
+# Declare a coaster_conversion function that accepts a dictionary.
+# The dictionary will have strings representing roller coasters as keys.
+# The values will be the heights of each coaster in meters.
+
+# Create a new dictionary with the same keys.
+# The heights should be converted from meters to feet,
+# and the result should be rounded to the closest integer.
+
+# The round function rounds a number to the nearest integer.
+
+# EXAMPLE:
+# coasters = {'Kingda Ka': 138, 'Steel Vengeance': 130, 'Top Thrill Dragster': 126}
+# coaster_conversion(coasters) => {'Kingda Ka': 456, 'Steel Vengeance': 427, 'Top Thrill Dragster': 413}
+
+coasters = {'Kingda Ka': 138, 'Steel Vengeance': 130, 'Top Thrill Dragster': 126}
+def coaster_converstion(coasters):
+    return {coaster: round(meter * 3.28084) for coaster, meter in coasters.items()}
+print(coaster_converstion(coasters))
