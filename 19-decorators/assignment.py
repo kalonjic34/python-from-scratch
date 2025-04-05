@@ -34,3 +34,18 @@ def outer():
     return inner
 
 print(outer()())
+
+# Define a global "a" variable assigned to the value 1.
+
+# Declare a "modify_a" function that accepts a single argument.
+# It should overwrite the value of the global variable "a" with the argument.
+
+a = 1
+
+def modify_a(value):
+    global a
+    a = value
+
+print(a)
+modify_a(10)
+print(a)
