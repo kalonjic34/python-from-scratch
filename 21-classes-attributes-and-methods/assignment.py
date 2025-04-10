@@ -89,3 +89,52 @@ book.rip_in_half()
 print(book.page_count)
 book.rip_in_half()
 print(book.page_count)
+
+# Declare a PizzaPie class that accepts a total_slices parameter.
+# - During the instantiation, assign the parameter to an attribute of the same name.
+
+# A PizzaPie object should also be initialized with a _slices_eaten protected attribute set to 0.
+
+class PizzaPie():
+    def __init__(self,total_slices):
+        self.total_slices = total_slices
+        self._slice_eaten = 0
+
+    @property
+    def slices_eaten(self):
+        return self._slice_eaten
+    
+    @slices_eaten.setter
+    def slices_eaten(self, slice_eaten):
+        if slice_eaten <= self.total_slices:
+            self._slice_eaten = slice_eaten
+    
+    @property
+    def percentage(self):
+        return self._slice_eaten / self.total_slices
+    
+# Define a _slices_eaten property:
+# - The getter method should retrieve the value of the _slices_eaten attribute.
+# - The setter method should allow updating _slices_eaten, but only if the new value is less than total_slices.
+
+# Define a percentage property:
+# - This property should calculate the percentage of the pie that has been eaten
+#   (slices eaten divided by total slices).
+# - This percentage property should be read-only.
+
+cheese = PizzaPie(8)  # Create a pizza with 8 slices
+cheese.slices_eaten = 2
+print(cheese.percentage)  # Outputs: 0.25
+
+cheese.slices_eaten = 4
+print(cheese.percentage)  # Outputs: 0.5
+
+cheese.slices_eaten = 10  # slices_eaten should not change; there are only 8 slices
+print(cheese.percentage)  # Outputs: 0.5
+
+# ERROR: AttributeError
+# cheese.percentage = 0.50  # Trying to directly set percentage causes an AttributeError.
+    
+    
+            
+    
