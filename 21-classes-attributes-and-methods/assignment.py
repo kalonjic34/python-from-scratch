@@ -135,6 +135,39 @@ print(cheese.percentage)  # Outputs: 0.5
 # ERROR: AttributeError
 # cheese.percentage = 0.50  # Trying to directly set percentage causes an AttributeError.
     
-    
+# Coding Exercise - Class Methods
+
+# Declare a Chocolate class that accepts a cacao_content attribute.
+
+# Define a sweet class method:
+# - This should return a Chocolate object with cacao_content set to 30.
+
+# Define a semisweet class method:
+# - This should return a Chocolate object with cacao_content set to 50.
+
+# Define a bittersweet class method:
+# - This should return a Chocolate object with cacao_content set to 70.
+
+# Define a bitter class method:
+# - This should return a Chocolate object with cacao_content set to 99.
             
+class Chocolate():
+    def __init__(self,cacao_content):
+        self.cacao_content = cacao_content
+        
+    @classmethod
+    def sweet(cls):
+        return cls(cacao_content = 30)
+    
+    @classmethod
+    def semisweet(cls):
+        return cls(cacao_content = 50)
+    
+    @classmethod
+    def bittersweet(cls):
+        return cls(cacao_content = 70)
+    
+    @classmethod
+    def bitter(cls):
+        return cls(cacao_content = 99)
     
