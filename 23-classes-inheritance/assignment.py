@@ -94,3 +94,61 @@ print(lars.albums)  # Output: ["Ride the Lightning"]
 
 lars.release_album("Master of Puppets")
 print(lars.albums)  # Output: ["Ride the Lightning", "Master of Puppets"]
+
+print("\n - Coding Exercise SOLUTION Polymorphism\n")
+
+# We're modeling a routine for proper dental health, which includes brushing our teeth,
+# flossing, and using mouthwash. The order of these three varies from person to person.
+
+# 1. Declare a DentalHealthItem class. Its initialization should set a "price" attribute.
+
+# 2. Declare a Toothbrush subclass that inherits from DentalHealthItem.
+#    On it, define a "use" instance method that returns "Brushing the teeth".
+
+# 3. Declare a Floss subclass that inherits from DentalHealthItem.
+#    On it, define a "use" instance method that returns "Flossing the teeth".
+
+# 4. Declare a Mouthwash subclass that inherits from DentalHealthItem.
+#    On it, define a "use" instance method that returns "Washing the teeth".
+
+# 5. Instantiate an instance of a Toothbrush and assign it to a "toothbrush" variable.
+# 6. Instantiate an instance of a Floss and assign it to a "floss" variable.
+# 7. Instantiate an instance of a Mouthwash and assign it to a "mouthwash" variable.
+
+# 8. Declare a "dental_health_kit" variable. It should be a list that stores the three objects.
+
+# 9. Import the "random" module (see last lesson for reference).
+# 10. Invoke the "shuffle" function from the module, passing in the dental_health_kit list.
+#     This will mutate the list, randomizing the order of its elements.
+
+# 11. Use list comprehension to invoke the "use" method on all three objects in "dental_health_kit".
+
+# 12. Assign the resulting list of strings to an "actions" variable.
+
+import random
+
+class DentalHealthItem():
+    def __init__(self,price):
+        self.price = price
+        
+class Toothbrush(DentalHealthItem):
+    def use(self):
+        return "Brushing the teeth"
+
+class Floss(DentalHealthItem):
+    def use(self):
+        return "Flossing the teeth"
+    
+class Mouthwash(DentalHealthItem):
+    def use(self):
+        return "Washing the teeth"
+    
+toothbrush = Toothbrush(price=4.99)
+floss = Floss(price= 1.99)
+mouthwash = Mouthwash(price=7.99)
+
+dental_health_kit = [toothbrush, floss, mouthwash]
+random.shuffle(dental_health_kit)
+
+actions = [item.use() for item in dental_health_kit]
+print(actions)
