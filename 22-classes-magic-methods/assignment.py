@@ -1,3 +1,4 @@
+print(" - Coding Exercise - Equality and String Representation\n")
 #  Coding Exercise - Equality and String Representation
 
 
@@ -38,3 +39,54 @@ print(boston1)  # Paid 24.99 to Greyhound to go to Boston.
 print(boston1 == philly)  # False - different destinations
 print(boston1 == boston2)  # True - same destination and insignificant price difference
 print(boston1 == boston3)  # False - large price difference
+
+print("\n - Coding Exercise namedtuple\n")
+
+#  Coding Exercise namedtuple
+
+# Use the namedtuple function to create a GymExercise class.
+# The class should have three attributes: name, weight, and reps.
+
+# Assign a squat variable to a GymExercise tuple object with:
+# - Name: "squat"
+# - Weight: 265
+# - Rep count: 3
+
+# Assign a bench variable to a GymExercise tuple object with:
+# - Name: "benchpress"
+# - Weight: 185
+# - Rep count: 5
+
+# Assign a deadlift variable to a GymExercise tuple object with:
+# - Name: "deadlift"
+# - Weight: 225
+# - Rep count: 6
+
+# Assign a press variable to a GymExercise tuple object with:
+# - Name: "press"
+# - Weight: 120
+# - Rep count: 8
+
+import collections
+
+GymExercise = collections.namedtuple("GymExercise",["name","weight","reps"])
+
+squat = GymExercise(name="squat", weight=265, reps=3)
+print(squat.name)
+print(squat.weight)
+print(squat.reps)
+
+bench = GymExercise(name="benchpress", weight=185, reps=5)
+print(bench.name)
+print(bench.weight)
+print(bench.reps)
+
+deadlift = GymExercise("deadlift",225, 6)
+print(deadlift.name)
+print(deadlift.weight)
+print(deadlift.reps)
+
+press = GymExercise("press",120, 8)
+print(press.name)
+print(press.weight)
+print(press.reps)
